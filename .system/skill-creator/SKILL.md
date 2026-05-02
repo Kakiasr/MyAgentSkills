@@ -9,6 +9,15 @@ metadata:
 
 This skill provides guidance for creating effective skills.
 
+## Local Storage Rule
+
+On this machine, create and modify local skills in `/Users/kakiasr/Documents/MyAgentSkills` unless the user explicitly gives another destination.
+
+- Standalone skills: `/Users/kakiasr/Documents/MyAgentSkills/<skill-name>/`.
+- System skills: `/Users/kakiasr/Documents/MyAgentSkills/.system/<skill-name>/`.
+- Skills inside local plugins: `/Users/kakiasr/Documents/MyAgentSkills/plugins/<plugin-name>/skills/<skill-name>/`.
+- Treat `/Users/kakiasr/Documents/Codex/shared-skills`, `/Users/kakiasr/.codex/skills`, `/Users/kakiasr/plugins`, and `/Users/kakiasr/.agents/plugins/marketplace.json` as compatibility entry points when they resolve to `/Users/kakiasr/Documents/MyAgentSkills`; do not use them as the canonical edit location.
+
 ## About Skills
 
 Skills are modular, self-contained folders that extend Codex's capabilities by providing

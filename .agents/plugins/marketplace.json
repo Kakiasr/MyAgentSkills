@@ -1,0 +1,20 @@
+{
+  "name": "kakiasr-local",
+  "interface": {
+    "displayName": "Kakiasr Local Plugins"
+  },
+  "plugins": [
+    {
+      "name": "unity-game-design-dev",
+      "source": {
+        "source": "local",
+        "path": "./Documents/MyAgentSkills/plugins/unity-game-design-dev"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
+    }
+  ]
+}

@@ -7,6 +7,20 @@ description: Create and scaffold plugin directories for Codex with a required `.
 
 ## Quick Start
 
+Default local root on this machine:
+
+```text
+/Users/kakiasr/Documents/MyAgentSkills
+```
+
+When the user asks to create or modify a local Codex plugin, or to create or modify a skill inside a local plugin, use this root unless the user explicitly provides another destination:
+
+- Plugin roots live under `/Users/kakiasr/Documents/MyAgentSkills/plugins/<plugin-name>/`.
+- Plugin marketplace metadata lives at `/Users/kakiasr/Documents/MyAgentSkills/.agents/plugins/marketplace.json`.
+- Standalone skills live directly under `/Users/kakiasr/Documents/MyAgentSkills/<skill-name>/`.
+- System skills live under `/Users/kakiasr/Documents/MyAgentSkills/.system/<skill-name>/`.
+- If an older compatibility path exists under `/Users/kakiasr/plugins/<plugin-name>` or `/Users/kakiasr/.agents/plugins/marketplace.json`, treat it as an alias only; do not make the canonical edit there unless it resolves into `/Users/kakiasr/Documents/MyAgentSkills`.
+
 1. Run the scaffold script:
 
 ```bash
@@ -32,6 +46,16 @@ For a home-local plugin, treat `<home>` as the root and use:
 python3 .agents/skills/plugin-creator/scripts/create_basic_plugin.py my-plugin \
   --path ~/plugins \
   --marketplace-path ~/.agents/plugins/marketplace.json \
+  --with-marketplace
+```
+
+For this machine's canonical local plugin store, use:
+
+```bash
+python3 /Users/kakiasr/Documents/MyAgentSkills/.system/plugin-creator/scripts/create_basic_plugin.py my-plugin \
+  --path /Users/kakiasr/Documents/MyAgentSkills/plugins \
+  --marketplace-path /Users/kakiasr/Documents/MyAgentSkills/.agents/plugins/marketplace.json \
+  --marketplace-source-prefix ./Documents/MyAgentSkills/plugins \
   --with-marketplace
 ```
 
@@ -70,6 +94,7 @@ python3 .agents/skills/plugin-creator/scripts/create_basic_plugin.py my-plugin -
 - `marketplace.json` always lives at `<repo-root>/.agents/plugins/marketplace.json`.
 - For a home-local plugin, use the same convention with `<home>` as the root:
   `~/.agents/plugins/marketplace.json` plus `./plugins/<plugin-name>`.
+- For this machine, use `/Users/kakiasr/Documents/MyAgentSkills/.agents/plugins/marketplace.json` and store plugin source under `/Users/kakiasr/Documents/MyAgentSkills/plugins/<plugin-name>`. Because the active local marketplace source root is `/Users/kakiasr`, marketplace entries for these plugins should use `source.path` values like `./Documents/MyAgentSkills/plugins/<plugin-name>`. When using `scripts/create_basic_plugin.py`, pass `--marketplace-source-prefix ./Documents/MyAgentSkills/plugins`.
 - Marketplace root metadata supports top-level `name` plus optional `interface.displayName`.
 - Treat plugin order in `plugins[]` as render order in Codex. Append new entries unless a user explicitly asks to reorder the list.
 - `displayName` belongs inside the marketplace `interface` object, not individual `plugins[]` entries.

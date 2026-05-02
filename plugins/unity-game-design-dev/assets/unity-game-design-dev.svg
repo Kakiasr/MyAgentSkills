@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Unity Game Design Dev">
+  <rect width="128" height="128" rx="24" fill="#10251C"/>
+  <path d="M64 16 104 39v50L64 112 24 89V39L64 16Z" fill="#1F8A5B"/>
+  <path d="M64 30 91 46v34L64 96 37 80V46L64 30Z" fill="#F5F7FA"/>
+  <path d="M64 42 81 52v22L64 84 47 74V52L64 42Z" fill="#10251C"/>
+  <path d="M64 42v42M47 52l34 22M81 52 47 74" fill="none" stroke="#1F8A5B" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="64" cy="64" r="8" fill="#F3C969"/>
+</svg>
