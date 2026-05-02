@@ -1,0 +1,4 @@
+interface:
+  display_name: "GameDesign"
+  short_description: "知识库驱动的游戏设计、原型规划与严格策划案模板助手"
+  default_prompt: "Use $gamedesign to generate or review a game design document strictly following the bundled template and knowledge base."

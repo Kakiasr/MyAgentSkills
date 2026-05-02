@@ -1,0 +1,4 @@
+interface:
+  display_name: "2D Game Animation Assets"
+  short_description: "Produce Unity-ready 2D animation assets"
+  default_prompt: "Use $2d-game-animation-assets to create a Unity-ready 2D sprite animation pack."
