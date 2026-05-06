@@ -1,0 +1,59 @@
+{
+  "name": "game-design-dev",
+  "version": "0.1.0",
+  "description": "内置 game-design、系统策划案、Unity 与 Godot 工作流，面向游戏设计评估、策划案落地、原型规划与可调参开发辅助插件。",
+  "author": {
+    "name": "Kakiasr",
+    "email": "kakiasr@example.com",
+    "url": "https://example.com/"
+  },
+  "homepage": "https://example.com/game-design-dev",
+  "repository": "https://example.com/game-design-dev",
+  "license": "MIT",
+  "keywords": [
+    "unity",
+    "godot",
+    "game-design",
+    "prototype",
+    "scriptableobject",
+    "gdscript",
+    "csharp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "游戏开发",
+    "shortDescription": "将游戏设计落地为 Unity 或 Godot 原型。",
+    "longDescription": "内置 game-design、game-system-spec、unity-game-design-dev 与 godot-game-design-dev 技能，用于评估游戏策划案，梳理核心体验、核心玩法、核心系统、核心循环、系统层级图和交互链；也可将零散创意整理为程序可实现的系统策划案，并按目标引擎映射为 Unity 场景、组件、Prefab、ScriptableObject 数据资产，或 Godot 场景、节点、脚本、资源、信号、输入映射和导出变量。",
+    "developerName": "Kakiasr",
+    "category": "Development",
+    "capabilities": [
+      "游戏策划案评估",
+      "系统策划案整理",
+      "设计模式选型",
+      "游戏设计文档落地",
+      "PDF/DOCX 策划案读取",
+      "Unity 原型规划",
+      "Godot 原型规划",
+      "C# 架构拆分",
+      "GDScript 架构拆分",
+      "Godot 场景与节点设计",
+      "ScriptableObject 数据设计"
+    ],
+    "websiteURL": "https://example.com/game-design-dev",
+    "privacyPolicyURL": "https://example.com/privacy",
+    "termsOfServiceURL": "https://example.com/terms",
+    "defaultPrompt": [
+      "评估这份游戏策划案并给出 Unity 原型落地方案。",
+      "评估这份游戏策划案并给出 Godot 原型落地方案。",
+      "把这些零散创意整理为程序可实现的系统策划案。",
+      "为这个游戏系统选择合适的 Unity 设计模式并说明代码结构。",
+      "把这个核心玩法拆成 Unity 场景、组件和可调数据。",
+      "把这个核心玩法拆成 Godot 场景、节点、信号和资源。",
+      "按策划案实现一个易读、可调参的 Unity 原型。"
+    ],
+    "brandColor": "#1F8A5B",
+    "composerIcon": "./assets/unity-game-design-dev.svg",
+    "logo": "./assets/unity-game-design-dev.svg",
+    "screenshots": []
+  }
+}

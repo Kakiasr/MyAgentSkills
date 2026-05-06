@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "unity-game-design-dev",
+      "name": "game-design-dev",
       "source": {
         "source": "local",
-        "path": "./Documents/MyAgentSkills/plugins/unity-game-design-dev"
+        "path": "./Documents/MyAgentSkills/plugins/game-design-dev"
       },
       "policy": {
         "installation": "AVAILABLE",

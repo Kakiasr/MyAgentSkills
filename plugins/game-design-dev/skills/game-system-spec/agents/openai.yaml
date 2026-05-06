@@ -1,0 +1,4 @@
+interface:
+  display_name: "Game System Spec"
+  short_description: "将零散创意与循环图整理为程序可实现的游戏系统策划案"
+  default_prompt: "Use $game-system-spec to turn scattered game ideas or a gameplay loop diagram into an implementation-ready system design spec."

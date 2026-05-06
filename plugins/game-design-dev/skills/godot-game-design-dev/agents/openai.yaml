@@ -1,0 +1,4 @@
+interface:
+  display_name: "Godot Game Design Dev"
+  short_description: "将游戏设计落地为 Godot 4 场景、节点、脚本与可调资源"
+  default_prompt: "Use $godot-game-design-dev to turn this game idea or design brief into a Godot 4 prototype plan with scenes, nodes, scripts, resources, signals, and input actions."
