@@ -33,3 +33,30 @@ The active local plugin marketplace is stored at:
 Compatibility paths such as `/Users/kakiasr/plugins` and
 `/Users/kakiasr/.agents/plugins/marketplace.json` should point back into this
 repository.
+
+## Automatic Git sync
+
+This repository can auto-commit and push local skill changes through a macOS
+LaunchAgent.
+
+The sync script is:
+
+```text
+/Users/kakiasr/Documents/MyAgentSkills/scripts/auto_sync_skills.sh
+```
+
+The LaunchAgent template is:
+
+```text
+/Users/kakiasr/Documents/MyAgentSkills/launchd/com.kakiasr.myagentskills.autosync.plist
+```
+
+When enabled, macOS watches the repository path, waits briefly for editor save
+bursts to settle, then stages all repository changes, commits them on `main`,
+rebases from `origin/main`, and pushes to `origin/main`.
+
+Logs are written to:
+
+```text
+/Users/kakiasr/Library/Logs/MyAgentSkills/auto-sync.log
+```

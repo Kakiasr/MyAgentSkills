@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.kakiasr.myagentskills.autosync</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/Users/kakiasr/Documents/MyAgentSkills/scripts/auto_sync_skills.sh</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/kakiasr/Documents/MyAgentSkills</string>
+
+  <key>WatchPaths</key>
+  <array>
+    <string>/Users/kakiasr/Documents/MyAgentSkills</string>
+  </array>
+
+  <key>StandardOutPath</key>
+  <string>/Users/kakiasr/Library/Logs/MyAgentSkills/launchd.out.log</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/kakiasr/Library/Logs/MyAgentSkills/launchd.err.log</string>
+
+  <key>RunAtLoad</key>
+  <true/>
+</dict>
+</plist>
