@@ -17,9 +17,12 @@ Use this repository as the canonical local store for Codex skills and local plug
   `/Users/kakiasr/Documents/MyAgentSkills/launchd/com.kakiasr.myagentskills.autosync.plist`.
 - The sync script is stored at
   `/Users/kakiasr/Documents/MyAgentSkills/scripts/auto_sync_skills.sh`.
-- The active background loop script is stored at
+- The active recurring sync is the Codex automation
+  `auto-sync-myagentskills`, which checks for changes every five minutes.
+- The fallback background loop script is stored at
   `/Users/kakiasr/Documents/MyAgentSkills/scripts/auto_sync_loop.sh` and checks
-  for changes once per minute.
+  for changes once per minute while running from an authorized terminal
+  session.
 - If a macOS LaunchAgent is used, remember that `Documents` access can be
   blocked by TCC unless the executing shell has Full Disk Access.
 - If automatic sync fails, inspect

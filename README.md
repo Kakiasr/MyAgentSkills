@@ -36,7 +36,9 @@ repository.
 
 ## Automatic Git sync
 
-This repository can auto-commit and push local skill changes.
+This repository can auto-commit and push local skill changes. The active
+machine-level sync is a Codex automation named `Auto-sync MyAgentSkills`, with
+automation id `auto-sync-myagentskills`, running every five minutes.
 
 The sync script is:
 
@@ -44,14 +46,16 @@ The sync script is:
 /Users/kakiasr/Documents/MyAgentSkills/scripts/auto_sync_skills.sh
 ```
 
-The current always-on process uses:
+For manual use from an already-authorized terminal session, a polling loop is
+available:
 
 ```text
 /Users/kakiasr/Documents/MyAgentSkills/scripts/auto_sync_loop.sh
 ```
 
-It checks the repository once per minute, stages all repository changes, commits
-them on `main`, rebases from `origin/main`, and pushes to `origin/main`.
+It checks the repository once per minute while it is running, stages all
+repository changes, commits them on `main`, rebases from `origin/main`, and
+pushes to `origin/main`.
 
 A macOS LaunchAgent template is also available:
 
@@ -61,7 +65,8 @@ A macOS LaunchAgent template is also available:
 
 Because the repository is under `Documents`, macOS privacy controls may block
 LaunchAgent access unless the executing shell has Full Disk Access. In that
-case, use the loop script from an already-authorized terminal session.
+case, keep the Codex automation active or run the loop script from an
+already-authorized terminal session.
 
 Logs are written to:
 
