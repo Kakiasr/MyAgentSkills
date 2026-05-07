@@ -36,8 +36,7 @@ repository.
 
 ## Automatic Git sync
 
-This repository can auto-commit and push local skill changes through a macOS
-LaunchAgent.
+This repository can auto-commit and push local skill changes.
 
 The sync script is:
 
@@ -45,18 +44,28 @@ The sync script is:
 /Users/kakiasr/Documents/MyAgentSkills/scripts/auto_sync_skills.sh
 ```
 
-The LaunchAgent template is:
+The current always-on process uses:
+
+```text
+/Users/kakiasr/Documents/MyAgentSkills/scripts/auto_sync_loop.sh
+```
+
+It checks the repository once per minute, stages all repository changes, commits
+them on `main`, rebases from `origin/main`, and pushes to `origin/main`.
+
+A macOS LaunchAgent template is also available:
 
 ```text
 /Users/kakiasr/Documents/MyAgentSkills/launchd/com.kakiasr.myagentskills.autosync.plist
 ```
 
-When enabled, macOS watches the repository path, waits briefly for editor save
-bursts to settle, then stages all repository changes, commits them on `main`,
-rebases from `origin/main`, and pushes to `origin/main`.
+Because the repository is under `Documents`, macOS privacy controls may block
+LaunchAgent access unless the executing shell has Full Disk Access. In that
+case, use the loop script from an already-authorized terminal session.
 
 Logs are written to:
 
 ```text
 /Users/kakiasr/Library/Logs/MyAgentSkills/auto-sync.log
+/Users/kakiasr/Library/Logs/MyAgentSkills/auto-sync-loop.log
 ```
