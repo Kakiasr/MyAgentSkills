@@ -90,13 +90,12 @@ def build_marketplace_entry(
     install_policy: str,
     auth_policy: str,
     category: str,
-    source_path: str,
 ) -> dict[str, Any]:
     return {
         "name": plugin_name,
         "source": {
             "source": "local",
-            "path": source_path,
+            "path": f"./plugins/{plugin_name}",
         },
         "policy": {
             "installation": install_policy,
@@ -133,7 +132,6 @@ def update_marketplace_json(
     install_policy: str,
     auth_policy: str,
     category: str,
-    source_path: str,
     force: bool,
 ) -> None:
     if marketplace_path.exists():
@@ -150,13 +148,7 @@ def update_marketplace_json(
     if not isinstance(plugins, list):
         raise ValueError(f"{marketplace_path} field 'plugins' must be an array.")
 
-    new_entry = build_marketplace_entry(
-        plugin_name,
-        install_policy,
-        auth_policy,
-        category,
-        source_path,
-    )
+    new_entry = build_marketplace_entry(plugin_name, install_policy, auth_policy, category)
 
     for index, entry in enumerate(plugins):
         if isinstance(entry, dict) and entry.get("name") == plugin_name:
@@ -228,15 +220,6 @@ def parse_args() -> argparse.Namespace:
         ),
     )
     parser.add_argument(
-        "--marketplace-source-prefix",
-        default="./plugins",
-        help=(
-            "Marketplace source.path parent prefix. Defaults to ./plugins, producing "
-            "./plugins/<plugin-name>. For this machine's MyAgentSkills store, use "
-            "./Documents/MyAgentSkills/plugins."
-        ),
-    )
-    parser.add_argument(
         "--install-policy",
         default=DEFAULT_INSTALL_POLICY,
         choices=sorted(VALID_INSTALL_POLICIES),
@@ -299,15 +282,12 @@ def main() -> None:
 
     if args.with_marketplace:
         marketplace_path = Path(args.marketplace_path).expanduser().resolve()
-        source_prefix = args.marketplace_source_prefix.rstrip("/")
-        source_path = f"{source_prefix}/{plugin_name}"
         update_marketplace_json(
             marketplace_path,
             plugin_name,
             args.install_policy,
             args.auth_policy,
             args.category,
-            source_path,
             args.force,
         )
 
