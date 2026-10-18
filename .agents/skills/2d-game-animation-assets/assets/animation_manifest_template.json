@@ -1,0 +1,17 @@
+{
+  "asset": "asset_name",
+  "animation": "animation_name",
+  "fps": 12,
+  "loop": true,
+  "canvas": {
+    "width": 128,
+    "height": 128
+  },
+  "pivot": {
+    "x": 0.5,
+    "y": 1.0,
+    "convention": "top-left-origin-normalized"
+  },
+  "frames": [],
+  "events": []
+}

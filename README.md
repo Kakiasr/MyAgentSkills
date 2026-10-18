@@ -2,6 +2,12 @@
 
 本仓库提供 Codex 插件 `kaki-game-development-tools`。六个技能覆盖游戏设计、程序架构与开发、美术设计、资产创建、技术美术和跨专业工作流。详情见[插件说明](plugins/kaki-game-development-tools/README.md)。
 
+## 独立技能
+
+仓库的独立技能集中在 [`.agents/skills`](.agents/skills)；在本仓库及其子目录中启动 Codex 时可直接发现。当前包括 `2d-game-animation-assets`、`doc`、`gamedesign`、`pdf`、`playwright`。它们独立于 `kaki-game-development-tools` 插件，安装插件不会自动安装这些技能。
+
+需要在其他项目中使用某个独立技能时，将该技能目录链接到本机的用户技能目录 `~/.agents/skills/<skill-name>`。本机已为 `2d-game-animation-assets`、`doc` 和 `gamedesign` 建立链接；`pdf`、`playwright` 另有已安装版本，未重复建立链接。其他电脑克隆仓库后，需要按其系统路径单独建立用户技能链接。
+
 ## 首次安装
 
 ```sh
