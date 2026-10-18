@@ -1,0 +1,15 @@
+{
+  "name": "rea-local",
+  "version": "0.2.0",
+  "description": "Local REA 6.5.0 tools and evidence-based reverse engineering workflow.",
+  "license": "MIT",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "REA Local",
+    "shortDescription": "本地逆向分析与证据追踪",
+    "longDescription": "连接本机 REA，检查发行包、二进制与分析证据。",
+    "capabilities": [],
+    "defaultPrompt": "使用 REA 分析我指定的本地程序，提供证据并区分事实、推断和未知项。"
+  }
+}

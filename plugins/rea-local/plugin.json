@@ -1,0 +1,18 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "rea-local",
+  "version": "0.2.0",
+  "description": "Local REA 6.5.0 tools and evidence-based reverse engineering workflow for Codex.",
+  "license": "MIT",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "REA Local",
+        "shortDescription": "本地逆向分析与证据追踪",
+        "longDescription": "使用本机 REA 分析发行包与二进制，保留证据、推断和未知项。原生反编译需要另行配置分析引擎。",
+        "capabilities": [],
+        "defaultPrompt": "使用 REA 分析我指定的本地程序，提供证据并区分事实、推断和未知项。"
+      }
+    }
+  }
+}

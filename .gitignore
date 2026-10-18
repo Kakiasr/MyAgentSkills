@@ -1,0 +1,13 @@
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.py[cod]
+
+# Local conversation outputs, scratch files, and tool workspaces
+/artifacts/
+/output/
+/tmp/
+/.tools/
+
+# Machine-local Codex discovery junction to the canonical skills/ directory
+/.agents/skills/

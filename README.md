@@ -2,11 +2,13 @@
 
 本仓库提供 Codex 插件 `kaki-game-development-tools`。六个技能覆盖游戏设计、程序架构与开发、美术设计、资产创建、技术美术和跨专业工作流。详情见[插件说明](plugins/kaki-game-development-tools/README.md)。
 
+仓库也保存 [`rea-local`](plugins/rea-local/README.md) 插件源码；它使用独立的本地市场和运行环境，安装方式见其说明，不会随 `kaki-game-development-tools` 自动安装。
+
 ## 独立技能
 
-仓库的独立技能集中在 [`.agents/skills`](.agents/skills)；在本仓库及其子目录中启动 Codex 时可直接发现。当前包括 `2d-game-animation-assets`、`doc`、`gamedesign`、`pdf`、`playwright`。它们独立于 `kaki-game-development-tools` 插件，安装插件不会自动安装这些技能。
+仓库的独立技能集中在 [`skills`](skills)。当前包括 `2d-game-animation-assets`、`doc`、`pdf`、`playwright`。它们独立于 `kaki-game-development-tools` 插件，安装插件不会自动安装这些技能。Codex 不会直接扫描仓库根目录的 `skills/`；本机使用 `.agents/skills` 到 `skills/` 的目录链接作为发现入口，其他电脑克隆后也需建立该链接。
 
-需要在其他项目中使用某个独立技能时，将该技能目录链接到本机的用户技能目录 `~/.agents/skills/<skill-name>`。本机已为 `2d-game-animation-assets`、`doc` 和 `gamedesign` 建立链接；`pdf`、`playwright` 另有已安装版本，未重复建立链接。其他电脑克隆仓库后，需要按其系统路径单独建立用户技能链接。
+需要在其他项目中使用某个独立技能时，将该技能目录链接到本机的用户技能目录 `~/.agents/skills/<skill-name>`。本机的 `2d-game-animation-assets`、`doc` 用户链接已通过仓库发现入口重新可读；`pdf`、`playwright` 另有已安装版本。其他电脑克隆仓库后，也需按其系统路径建立用户技能链接。
 
 ## 首次安装
 
