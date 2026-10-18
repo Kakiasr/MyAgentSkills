@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unity数据与编辑器工具"
+  short_description: "开发配置资产、Prefab、Inspector和内容校验工具"
+  default_prompt: "使用 $unity-data-and-editor-tooling 设计或实现这套Unity数据编辑、Inspector和校验流程。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

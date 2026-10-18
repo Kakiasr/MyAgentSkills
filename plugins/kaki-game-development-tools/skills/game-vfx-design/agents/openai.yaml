@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏VFX设计"
+  short_description: "设计技能、命中、状态和环境特效的视觉语言"
+  default_prompt: "使用 $game-vfx-design 制定可读、可实现且有预算意识的玩法特效设计。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

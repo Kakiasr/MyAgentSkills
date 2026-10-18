@@ -1,8 +1,0 @@
-interface:
-  display_name: "游戏美术资产创建"
-  short_description: "生产并交付可直接导入引擎的游戏资产"
-  default_prompt: "把批准的美术设计转化为有明确规格、来源、导出和验收规则的游戏资产。"
-  brand_color: "#6E4CCB"
-policy:
-  allow_implicit_invocation: true
-

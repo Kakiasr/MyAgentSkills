@@ -16,7 +16,7 @@ description: "Use when defining or reviewing a game's intended player experience
 - 零散规则整理、系统树新建／转写／增量修改、配置与行为契约：交接`game-system-design`。
 - 行动—反馈—奖励—再次进入的循环、层级节律与循环图：交接`game-loop-design`。
 - 单纯整理已有规则时，不要求用户重新定义核心体验；只有玩法取舍实际不明确时才参与决策。
-- 技术架构和代码交给`game-programming-development`；视觉语言交给`game-art-design`。系统树中的需求对象不等于引擎类。
+- 技术架构和代码交给`game-programming-development`；全局视觉语言交给`game-art-direction`，具体内容交给对应美术专项。系统树中的需求对象不等于引擎类。
 
 ## 依据
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏美术资产管线"
+  short_description: "构建DCC导出、引擎导入、校验和批处理管线"
+  default_prompt: "使用 $game-art-pipeline 设计或实现可追踪、可校验、可回滚的美术资产管线。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

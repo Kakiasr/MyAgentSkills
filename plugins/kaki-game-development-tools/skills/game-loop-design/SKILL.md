@@ -44,7 +44,7 @@ description: "Explain how a game is played through readable, editable gameplay-l
 
 脚本只渲染明确节点、连线和坐标，不自动设计玩法、推断规则或优化布局。给出自定义图时按参考文档写JSON；输出为`loop.svg`、`loop.mmd`和`loop-check.json`。没有Python时直接写Mermaid与边表，注明渲染待完成；不因此阻断循环设计。
 
-使用实际可用的Python 3解释器；Windows也可使用`py -3`，不要依赖指向应用商店的空启动别名。此脚本不需要PyYAML或图像转换库；它们如用于开发校验，应留在插件外。
+使用实际可用的Python 3解释器；Windows也可使用`py -3`，不要依赖指向应用商店的空启动别名。此脚本不需要PyYAML或图像转换库；PyYAML只列于插件根目录的开发校验依赖，不属于渲染运行时。
 
 ## 质量门槛
 

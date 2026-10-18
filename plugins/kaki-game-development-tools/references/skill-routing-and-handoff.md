@@ -7,6 +7,23 @@
 - workflow在阶段成果需要成为正式基线时交给document；document发现规则、证据或实现缺口时回交对应专业技能。二者不得维护第二套专业结论。
 - 单专业请求直接进入专业技能；不要为了经过总入口而增加无关交付物。
 
+## “拆解”请求的强制消歧
+
+“拆解”既可能表示一个有边界的调查问题，也可能表示交付整套复刻文档。不得仅凭“拆解”二字固定路由到`game-analysis`，按下列顺序判断：
+
+1. 用户点名单一机制、单个系统、一个异常、一个数值或明确说“只要分析／概览／证据报告”时，路由到`game-analysis`；只交付声明范围内的分析结果。
+2. 用户指定一款完整游戏或发行包，并要求“拆解一次／完整拆解／复刻／还原”，但没有把范围限制到单个问题时，默认路由到`game-design-document`。它必须以`game-analysis`为首个证据生产步骤，并继续组织体验与玩法、正式循环、系统文档、需求、配置及一致性校验。
+3. 用户在同一会话已定义“拆解”的预期交付物时，沿用该定义，不得在后续调用中降级为分析摘要。
+4. 无法确认全部原作规则只会降低条目的证据状态和完成度，不会自动把文档集降级成聊天概览。为未知项建立`Q-*`、覆盖状态和验证计划。
+
+若用户没有指定输出介质，完整游戏拆解默认创建多文件文档集；只有用户明确要求“直接在聊天中简述”时才以聊天回答替代文件交付。
+
+### 路由完成门
+
+- `game-analysis`完成只表示证据阶段完成，不能代表完整游戏拆解完成。
+- 一旦任务被判定为文档集路线，在`game-design-document`完成装配、创建`document-set.json`并执行自动校验前，不得向用户发送任务完成式结论。
+- 时间、工具或证据不足时，仍要生成已知范围内的文档骨架和已确认内容，逐项标注`部分覆盖／未覆盖／受阻`；不得用一篇“综合分析”冒充体验文档、循环文档和系统文档。
+
 ## 权威所有权
 
 | 内容 | 权威技能／位置 | 其他位置如何使用 |
@@ -16,10 +33,13 @@
 | 玩家循环与循环图 | `game-loop-design` | 引用 `LOOP-*`及关联行为ID |
 | 单系统规则、行为、配置、数据与验收 | `systems/<SYS-ID>-<slug>.md` | 项目级文件只索引或引用 |
 | 跨系统需求与接口 | `game-design-document`的项目级需求文档 | 单系统文件引用相关 `REQ-*` |
-| 程序实现映射 | `game-programming-development` | 引用设计ID，不反向改写设计 |
-| 视觉方向 | `game-art-design` | 资产与技术美术引用 `VIS-*` |
-| 资产生产记录 | `game-art-asset-creation` | 引用 `AST-*`和视觉／行为ID |
-| 渲染与性能约束 | `game-technical-art` | 使用 `TA-*`／`NFR-*`并附测量条件 |
+| 程序架构与实现映射 | 对应程序专项；`game-programming-development`仅路由 | 引用设计ID，不反向改写设计 |
+| 全项目视觉基线 | `game-art-direction` | 各视觉专项引用全局`VIS-*` |
+| 角色道具／环境／UI／动画／VFX视觉规则 | 对应美术设计专项 | 生产和技术美术引用专项`VIS-*` |
+| 2D／3D资产生产记录 | 对应资产生产专项 | 引用`AST-*`和视觉／行为ID |
+| Shader、材质、灯光与后处理实现 | `game-rendering-technical-art` | 使用`TA-*`并引用`VIS-*` |
+| 美术导入、校验和自动化 | `game-art-pipeline` | 引用`AST/TA-*` |
+| 图形预算、诊断与优化证据 | `game-graphics-performance` | 使用`NFR/TA-*`并附固定测量环境 |
 
 ## 状态与稳定ID
 
@@ -49,5 +69,37 @@
 | `LOOP` | 体验节律、行为引用、反馈频率和性能预算 |
 | `VIS/AST` | 资产生产、导入、渲染预算和可读性验收 |
 | `REQ/NFR` | 系统文档、实现、技术美术及集成验收 |
+
+## 程序开发专项路由
+
+`game-programming-development`保留为兼容路由器，不再拥有全部程序结论。按实际产物确定权威技能：
+
+| 内容 | 权威技能 |
+| --- | --- |
+| 模块边界、数据所有权、生命周期、技术决定 | `game-software-architecture` |
+| 玩法代码、运行时系统、实现评审与缺陷修复 | `gameplay-programming` |
+| Unity目录、asmdef、场景组合、依赖装配与重开基础 | `unity-project-foundation` |
+| Unity配置、Prefab、序列化、Inspector及Editor工具 | `unity-data-and-editor-tooling` |
+| 测试覆盖、验证证据、构建与交付门禁 | `game-testing-and-validation` |
+
+单项程序请求直接进入对应专项；跨两个以上专项或显式调用旧ID时，由`game-programming-development`选择一个主责技能并组织交接。架构决定不等于实现完成，实现完成不等于验证通过。
+
+## 美术专项路由
+
+美术没有兼容总路由。单项请求直接进入对应专项；跨专项项目由`game-development-workflow`编排，并读取[美术专项交接契约](art-specialist-contract.md)。
+
+| 目标 | 权威技能 |
+| --- | --- |
+| 全局风格、美术圣经和跨领域一致性 | `game-art-direction` |
+| 角色、生物、装备和交互道具 | `game-character-and-prop-design` |
+| 场景、建筑、生态区和环境叙事 | `game-environment-art-design` |
+| HUD、菜单、组件、图标和字体视觉 | `game-ui-visual-design` |
+| 姿势、动作节奏、过渡和动画清单 | `game-animation-design` |
+| 技能、命中、状态和环境特效设计 | `game-vfx-design` |
+| Sprite、贴图、图标、UI和图集生产 | `game-2d-asset-production` |
+| 模型、贴图集、绑定、LOD和3D引擎包 | `game-3d-asset-production` |
+| Shader、材质、灯光、后处理和渲染特性 | `game-rendering-technical-art` |
+| DCC导出、引擎导入、校验和批处理 | `game-art-pipeline` |
+| GPU、显存、渲染预算和优化验证 | `game-graphics-performance` |
 
 变更完成后记录修改ID、直接消费者、已更新文件和仍待复核项。

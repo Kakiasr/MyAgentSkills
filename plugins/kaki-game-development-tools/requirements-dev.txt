@@ -1,0 +1,2 @@
+# Development-only dependency for skill validation; not required at runtime.
+PyYAML>=6.0,<7.0

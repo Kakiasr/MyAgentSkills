@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏图形性能"
+  short_description: "测量、诊断和验证GPU、显存与渲染预算"
+  default_prompt: "使用 $game-graphics-performance 在固定环境中测量并诊断这项图形性能问题。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏2D资产生产"
+  short_description: "生产并验证Sprite、贴图、图标、UI与图集资产"
+  default_prompt: "使用 $game-2d-asset-production 将批准的视觉设计生产为可导入引擎的2D资产。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

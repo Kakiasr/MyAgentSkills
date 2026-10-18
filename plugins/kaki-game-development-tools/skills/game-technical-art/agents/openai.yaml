@@ -1,7 +1,0 @@
-interface:
-  display_name: "游戏技术美术"
-  short_description: "连接视觉目标、资产管线与渲染性能"
-  default_prompt: "在目标平台和性能预算内制定或验证游戏技术美术方案。"
-  brand_color: "#6E4CCB"
-policy:
-  allow_implicit_invocation: true

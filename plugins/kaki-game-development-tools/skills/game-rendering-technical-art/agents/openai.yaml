@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏渲染技术美术"
+  short_description: "实现Shader、材质、灯光、后处理与渲染质量档"
+  default_prompt: "使用 $game-rendering-technical-art 把批准的视觉目标实现为目标引擎中的渲染方案。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Kakiasr/MyAgentSkills/kaki-game-development-tools-dependencies.schema.json",
+  "title": "Kaki game development tools dependency manifest",
+  "type": "object",
+  "required": ["schemaVersion", "required", "managed", "featureOptional", "development", "analysisProviders"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "required": { "type": "array", "items": { "$ref": "#/$defs/dependency" } },
+    "managed": { "type": "array", "items": { "$ref": "#/$defs/dependency" } },
+    "featureOptional": { "type": "array", "items": { "$ref": "#/$defs/dependency" } },
+    "development": { "type": "array", "items": { "$ref": "#/$defs/dependency" } },
+    "analysisProviders": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "components", "purpose"],
+        "properties": {
+          "id": { "type": "string" },
+          "components": { "type": "array", "items": { "type": "string" } },
+          "purpose": { "type": "string" },
+          "configuration": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "dependency": {
+      "type": "object",
+      "required": ["id", "kind", "version", "purpose"],
+      "properties": {
+        "id": { "type": "string" },
+        "kind": { "type": "string" },
+        "version": { "type": "string" },
+        "purpose": { "type": "string" },
+        "package": { "type": "string" },
+        "installedBy": { "type": "string" },
+        "installFile": { "type": "string" },
+        "location": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

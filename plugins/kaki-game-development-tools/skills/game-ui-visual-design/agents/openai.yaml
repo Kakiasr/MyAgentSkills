@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏UI视觉设计"
+  short_description: "设计HUD、菜单、组件、图标与可访问视觉系统"
+  default_prompt: "使用 $game-ui-visual-design 建立这套游戏UI的视觉语言、组件状态和资产规格。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

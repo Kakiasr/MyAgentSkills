@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kaki-game-development-tools",
-  "version": "0.8.1",
-  "description": "Kaki 的游戏开发插件，覆盖游戏设计文档、游戏拆解、体验与玩法、系统树、循环图、程序、美术、资产制作和技术美术。",
+  "version": "0.10.0",
+  "description": "Kaki 的游戏开发插件，覆盖游戏拆解与设计文档、体验系统循环、程序与Unity工程，以及细分的美术设计、资产生产、渲染管线和图形性能。",
   "author": {
     "name": "Kakiasr"
   },
@@ -17,7 +17,11 @@
     "game-system-design",
     "game-loop-design",
     "game-development",
+    "gameplay-programming",
+    "software-architecture",
     "unity",
+    "unity-editor-tooling",
+    "game-testing",
     "godot",
     "prototype",
     "game-art",
@@ -28,7 +32,7 @@
       "interface": {
         "displayName": "Kaki的游戏开发工具",
         "shortDescription": "覆盖设计、程序、美术与技术美术",
-        "longDescription": "以统一入口协调游戏拆解、体验与玩法、系统树、循环图及程序美术制作。游戏拆解完整保留REA技能正文、参考与工具集，在此基础上定制游戏机制、数值、结算与例外还原，以证据交接系统树、循环图与开发验收。",
+        "longDescription": "以统一入口协调游戏拆解、体验系统循环及程序美术制作。美术按指导、角色道具、环境、UI、动画、VFX、2D／3D生产、渲染、资产管线和图形性能独立分工；整款游戏拆解默认创建可追溯文档集。",
         "developerName": "Kakiasr",
         "category": "Development",
         "capabilities": [
@@ -38,14 +42,21 @@
           "Game System Design",
           "Game Loop Design",
           "Game Programming",
-          "Game Art Design",
-          "Game Art Asset Creation",
-          "Technical Art"
+          "Game Software Architecture",
+          "Gameplay Programming",
+          "Unity Project Foundation",
+          "Unity Editor Tooling",
+          "Game Testing and Validation",
+          "Game Art Direction",
+          "Character and Environment Art",
+          "Game UI Animation and VFX",
+          "2D and 3D Asset Production",
+          "Rendering Art Pipeline and Graphics Performance"
         ],
         "defaultPrompt": [
           "从设计、程序、美术和技术美术角度规划这个游戏项目。",
           "把这个游戏创意推进为可以开发和制作的最小可玩版本。",
-          "评审当前游戏项目，并给出跨专业的下一阶段执行计划。"
+          "完整拆解这款游戏，创建包含体验玩法、循环、逐系统文档、需求、配置和一致性校验的文档集。"
         ],
         "brandColor": "#6E4CCB",
         "composerIcon": "./assets/kaki-game-development-tools.svg",

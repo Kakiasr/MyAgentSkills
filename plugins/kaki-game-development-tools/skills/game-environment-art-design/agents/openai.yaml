@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏环境美术设计"
+  short_description: "设计场景、建筑、生态区、模块套件与环境叙事"
+  default_prompt: "使用 $game-environment-art-design 设计可读、可生产的游戏环境与模块化场景方案。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

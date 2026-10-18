@@ -1,70 +1,43 @@
 ---
 name: game-programming-development
-description: "Use when designing game software architecture or implementing, reviewing, debugging, testing, and validating gameplay code, engine systems, tools, data pipelines, save systems, UI logic, AI, networking boundaries, or runtime performance."
+description: "Compatibility router for game programming requests that span architecture, gameplay implementation, Unity project foundations, Unity data/editor tooling, or testing and validation. Route focused work to the matching specialist instead of handling every programming concern here."
 ---
 
-# Game Programming Architecture and Development
+# 游戏程序开发路由
 
 ## 职责
 
-把已确认的设计规则转化为可维护、可调试、可测试的运行时系统和开发工具。负责技术选型、模块边界、数据模型、生命周期、接口、实现与验证。
+保留原调用ID，识别程序开发请求属于哪个专项技能，并组织必要交接。本技能不再直接承担全部架构、实现、工具、调试和测试工作。
 
-输入优先采用`game-system-design`的系统树、配置与行为ID；系统树是需求，不强制一对象一脚本。纯需求建树／转写交给系统设计；玩家循环图交给`game-loop-design`。实现时发现费用、目标、次数或提交点未定，列出具体问题并回交，不用代码默认值静默替代设计决定。
+输入优先采用`game-system-design`的系统规则、配置、行为和验收ID。发现玩法规则、费用、目标、次数或结算点未定时，建立`Q-*`并回交设计，不用代码默认值替代设计决定。现有发行游戏的事实还原交给`game-analysis`。
 
-现有发行游戏的行为还原交给`game-analysis`；正常源码工程架构分析仍属本技能，不运行无关REA准备步骤。重建实现采用确认后的需求基线，不把反编译伪代码直接当原始源码或可自由再用的资产。
+先读[插件级路由与交接契约](../../references/skill-routing-and-handoff.md)。仅在请求跨越两个以上程序专项、用户显式调用旧ID，或需要规划端到端程序交付时使用本路由器；单项请求直接进入专项技能。
 
-## 工作模式
+## 专项路由
 
-先选择最小模式，不因使用本技能就同时做架构、实现、评审和调试。跨技能ID与回交规则见[插件级路由与交接契约](../../references/skill-routing-and-handoff.md)；需要正式交付结构时读[程序交付模板](templates/programming-deliverable-template.md)。
+| 用户目标 | 主责技能 | 不属于该技能的内容 |
+| --- | --- | --- |
+| 技术方案、模块边界、数据所有权、接口、生命周期、存档／联网边界 | `game-software-architecture` | 不默认改代码 |
+| 实现、扩展、评审或调试玩法代码和运行时系统 | `gameplay-programming` | 不重新定义产品规则 |
+| Unity目录、asmdef、场景组合、依赖装配、启动／重开生命周期 | `unity-project-foundation` | 不实现具体玩法算法 |
+| Unity配置资产、Prefab、序列化、Inspector、Editor工具和内容校验器 | `unity-data-and-editor-tooling` | 不拥有本局运行状态 |
+| 测试策略、复现、EditMode／PlayMode、构建冒烟和交付验证 | `game-testing-and-validation` | 不在只要求验证时顺带修复 |
 
-- **架构模式**：定义模块、数据所有权、接口、生命周期、技术风险和实现顺序；不声称代码已完成。
-- **实现模式**：在现有工程内完成明确需求、测试和必要工具；先读取项目约定，不顺带重构无关系统。
-- **评审／调试模式**：依据具体症状、代码或运行证据定位问题并给结论；用户只要求诊断时不自动修改。
-- **验证模式**：检查编译、连接、序列化、状态转移、异常路径和性能边界；分别报告自动与手工验证。
+Unity功能实现通常以`gameplay-programming`为主；只有任务实际涉及工程基础、内容工具或验证时，才再调用对应Unity专项。若环境中存在更细的`unity-workbench`或`unity`技能，按其触发范围执行具体Unity操作，本插件专项继续拥有架构基线、交接和验收口径。
 
-## 工作流
+## 编排顺序
 
-1. 检查现有工程、引擎版本、包、场景、资源、代码约定和构建目标；尊重既有架构。
-2. 将设计规则拆为对象、静态配置、运行时数据、状态、命令、事件、查询和持久化数据。
-3. 明确模块所有权、公开接口、更新顺序、对象生命周期和跨系统通信。
-4. 选择最简单可维护的实现；只在存在实际替换、解耦、创建或状态复杂度时使用设计模式。
-5. 先实现最小可玩路径，再增加调试入口、测试、编辑器工具和内容扩展点。
-6. 验证编译、序列化、场景或资源连接、输入、存档、异常路径和性能风险。
-
-## 实现规格（与需求规则建立映射）
-
-每个重要系统至少写明：
-
-- 责任与边界。
-- 依赖与被依赖方。
-- 静态配置及其编辑位置。
-- 运行时数据及其唯一所有者。
-- 状态、合法转移和竞争请求优先级。
-- 输入命令、查询接口和事实事件。
-- 正常路径、失败路径、重复调用和中断策略。
-- 文件或资产清单及各自职责。
-- 可自动化或可在编辑器中执行的验收测试。
-
-## 引擎路由
-
-- Unity：调用当前环境中匹配的 `unity-workbench` 或 `unity` 专项技能。共享静态规则优先使用 ScriptableObject；运行时状态不得写回共享资产。
-- Godot：检查项目版本、场景树、输入映射、autoload、Resource 和 signal 约定；共享 Resource 不保存会在实例间串扰的运行时状态。
-- 自研或其他引擎：先识别主循环、实体模型、资源系统、序列化、构建和测试入口，再按项目惯例实现。
-
-## 架构原则
-
-- 配置、运行时状态、模拟、表现和编辑器工具分离。
-- 单一事实源；禁止两个系统同时拥有同一可变状态。
-- 跨系统写操作通过明确命令或接口，已发生事实通过事件发布。
-- 随机性可注入种子，关键模拟可复现。
-- 核心规则不依赖帧率，时间单位和更新阶段明确。
-- 先测规则与状态转移，再测表现层连接。
+1. 记录工程、引擎版本、平台、输入规则ID、范围和明确排除项。
+2. 选择一个主责技能；其余技能只接收明确的交接问题，不把一次小改动升级成全面重构。
+3. 架构未定且会影响实现时：`game-software-architecture` → 实现专项。
+4. Unity新项目或工程骨架不可靠时：`unity-project-foundation` → `gameplay-programming`。
+5. 配置、Prefab或策划编辑入口是需求的一部分时：实现专项 → `unity-data-and-editor-tooling`。
+6. 代码或资产变更完成后：`game-testing-and-validation`按风险验证；失败证据回交实际所有者。
+7. 汇总设计ID→架构决定→文件／资产→测试证据，不重复维护各专项正文。
 
 ## 完成条件
 
-- 代码或方案能追溯到具体设计规则。
-- 重要参数可由目标角色调整且有安全范围。
-- 所有公共接口、事件和序列化字段有明确用途。
-- 正常、失败和边界路径均有可观察验证。
-- 明确列出已验证内容、未验证内容和需要手工完成的引擎步骤。
-
+- 每项工作只有一个主责技能，跨技能输入和输出明确。
+- 旧`game-programming-development`调用被正确路由，没有以总入口代替专项判断。
+- 已确认、假设、架构决定、实现状态和验证状态没有混写。
+- 未执行的Unity编辑器步骤、构建和手工检查均明确列出。

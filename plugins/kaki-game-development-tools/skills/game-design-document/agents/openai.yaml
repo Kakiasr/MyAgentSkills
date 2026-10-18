@@ -1,7 +1,7 @@
 interface:
   display_name: "游戏设计文档"
-  short_description: "编排拆解、玩法、循环、系统、需求与配置文档集"
-  default_prompt: "使用 $game-design-document 将这些创意整理为可直接用于复刻原游戏的可追溯游戏设计文档集。"
+  short_description: "整款游戏拆解总入口，交付玩法、循环、逐系统、需求与配置文档集"
+  default_prompt: "使用 $game-design-document 完整拆解指定游戏或整理创意，创建实际的多文件可追溯文档集；编排原作证据、体验玩法、循环、逐系统文档、需求、配置与自动校验，未知项保留状态而不省略整类文档。"
   brand_color: "#6E4CCB"
 policy:
   allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏动画设计"
+  short_description: "定义动作语言、关键姿势、节奏、过渡和动画清单"
+  default_prompt: "使用 $game-animation-design 将玩法状态和反馈要求转化为动画设计与生产简报。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

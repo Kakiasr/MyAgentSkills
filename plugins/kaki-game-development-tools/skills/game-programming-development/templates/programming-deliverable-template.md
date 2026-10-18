@@ -1,6 +1,7 @@
 # 程序交付模板
 
-- 模式：架构／实现／评审调试／验证
+- 主责技能：`game-software-architecture`／`gameplay-programming`／`unity-project-foundation`／`unity-data-and-editor-tooling`／`game-testing-and-validation`
+- 模式：架构／实现／评审调试／工程基础／数据工具／验证
 - 工程、引擎、版本、平台与构建目标：
 - 输入规则ID、范围与排除项：
 - 已知约束、假设、待决项：

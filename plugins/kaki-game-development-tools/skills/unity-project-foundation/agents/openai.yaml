@@ -1,0 +1,7 @@
+interface:
+  display_name: "Unity项目基础架构"
+  short_description: "规划Unity目录、程序集、场景装配、依赖关系和重开生命周期"
+  default_prompt: "使用 $unity-project-foundation 建立或审查这个Unity项目的结构、装配和生命周期基线。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true

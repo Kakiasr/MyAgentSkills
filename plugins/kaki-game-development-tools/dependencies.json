@@ -1,0 +1,106 @@
+{
+  "$schema": "./references/dependencies.schema.json",
+  "schemaVersion": "1.0",
+  "required": [
+    {
+      "id": "node",
+      "kind": "runtime",
+      "version": "^22.19.0 || ^24.11.0 || >=26.0.0",
+      "purpose": "运行REA启动器、文档集校验器、路由测试和JavaScript示例模型"
+    }
+  ],
+  "managed": [
+    {
+      "id": "rea-agents",
+      "kind": "npm-package",
+      "version": "6.7.0",
+      "purpose": "game-analysis的REA服务运行时",
+      "installedBy": "scripts/rea/setup.mjs",
+      "location": "用户缓存，不打包node_modules"
+    }
+  ],
+  "featureOptional": [
+    {
+      "id": "python",
+      "kind": "runtime",
+      "version": ">=3.10",
+      "purpose": "渲染和测试可编辑游戏循环图；脚本只使用Python标准库"
+    },
+    {
+      "id": "unity",
+      "kind": "application",
+      "version": "由目标项目锁定",
+      "purpose": "执行Unity工程、编辑器、PlayMode和构建验证"
+    },
+    {
+      "id": "git",
+      "kind": "tool",
+      "version": "由开发环境提供",
+      "purpose": "仓库同步、差异检查和安全迁移"
+    },
+    {
+      "id": "codex-cli",
+      "kind": "tool",
+      "version": "提供plugin命令的版本",
+      "purpose": "安装、重新加载和检查本地插件"
+    }
+  ],
+  "development": [
+    {
+      "id": "pyyaml",
+      "kind": "python-package",
+      "package": "PyYAML",
+      "version": ">=6.0,<7.0",
+      "purpose": "运行skill-creator的quick_validate.py",
+      "installFile": "requirements-dev.txt"
+    }
+  ],
+  "analysisProviders": [
+    {
+      "id": "ghidra-jdk",
+      "components": ["Ghidra", "64位JDK"],
+      "purpose": "REA原生反编译",
+      "configuration": ["GHIDRA_INSTALL_DIR", "JAVA_HOME"]
+    },
+    {
+      "id": "android",
+      "components": ["JADX", "Java"],
+      "purpose": "REA Android APK代码分析"
+    },
+    {
+      "id": "ida",
+      "components": ["IDA Pro", "ida-pro-mcp"],
+      "purpose": "可选REA IDA provider"
+    },
+    {
+      "id": "kuna",
+      "components": ["Kuna"],
+      "purpose": "可选REA全程序原生分析provider"
+    },
+    {
+      "id": "firmware",
+      "components": ["Binwalk或Unblob"],
+      "purpose": "固件区域识别与提取"
+    },
+    {
+      "id": "packet-analysis",
+      "components": ["Wireshark tshark", "capinfos"],
+      "purpose": "PCAP字段和流量摘要分析"
+    },
+    {
+      "id": "signal-analysis",
+      "components": ["sigrok-cli 0.7.2"],
+      "purpose": "录制逻辑／信号解码"
+    },
+    {
+      "id": "wasm",
+      "components": ["WABT 1.0.42"],
+      "purpose": "WebAssembly静态检查"
+    },
+    {
+      "id": "elf-diagnostics",
+      "components": ["Python pwntools"],
+      "purpose": "Linux ELF离线布局和缓解措施检查"
+    }
+  ]
+}

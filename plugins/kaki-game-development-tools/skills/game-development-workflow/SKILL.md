@@ -11,24 +11,32 @@ description: "Coordinate requests spanning game analysis, experience and gamepla
 
 本技能只负责推进工作，不维护正式文档集。用户要求策划案、复刻文档、需求集、配置表、文档迁移或跨文档校验时，转交`game-design-document`；阶段成果需要冻结为正式基线时也由该技能装配。跨技能工作先读[插件级路由与交接契约](../../references/skill-routing-and-handoff.md)。
 
+用户对一款完整游戏或发行包说“拆解一次／完整拆解／复刻／还原”，且未限定为单一机制问题时，也视为正式文档集请求，必须转交`game-design-document`。不要因为句子里没有“文档”二字就只运行`game-analysis`。
+
 ## 工作顺序
 
 1. 判断需求涉及哪几个专业，以及当前处于定义、制作、集成、调试还是验收阶段。
 2. 检查项目文件，确认目标引擎、平台、画面类型、分辨率、性能等级、输入方式、团队规模和交付期限。缺失信息只有在会改变方案时才追问。
 3. 建立共同基线：玩家目标、核心循环、目标平台、镜头、视觉目标、帧率与内存预算、最小可玩范围。
 4. 按依赖顺序调用本插件技能：
-   - 已有游戏机制、内容、数值与发行包的证据分析：`game-analysis`。仅分析不默认实现复刻；普通源码不强制启用REA。
+   - 已有游戏机制、内容、数值与发行包的有边界证据分析：`game-analysis`。仅分析不默认实现复刻；普通源码不强制启用REA。完整游戏拆解则由`game-design-document`编排，并把本技能作为证据阶段。
    - 目标感受、玩家操作、决策与反馈未定：`game-design`（游戏体验与玩法设计，保留旧调用ID）。
    - 零散规则转需求、系统树新建／增量修改、配置与行为契约：`game-system-design`。
    - 分析／绘制游戏循环、层级节律与再次进入动机：`game-loop-design`。
-   - 需要技术方案或代码：`game-programming-development`。
-   - 需要视觉方案：`game-art-design`。
-   - 需要生产具体素材：`game-art-asset-creation`。
-   - 需要渲染、性能、Shader 或资产管线：`game-technical-art`。
+   - 程序工作跨越架构、实现、Unity工程基础、数据工具或验证：`game-programming-development`负责路由。
+   - 模块边界、数据所有权、接口与生命周期：`game-software-architecture`。
+   - 玩法代码实现、评审或调试：`gameplay-programming`。
+   - Unity目录、程序集、场景装配和重开基础：`unity-project-foundation`。
+   - Unity配置资产、Prefab、Inspector和Editor工具：`unity-data-and-editor-tooling`。
+   - 测试策略、自动化、构建和交付判定：`game-testing-and-validation`。
+   - 全局视觉基线：`game-art-direction`；角色道具、环境、UI、动画、VFX分别进入同名美术专项。
+   - 生产具体素材：按维度进入`game-2d-asset-production`或`game-3d-asset-production`。
+   - Shader／材质／灯光进入`game-rendering-technical-art`，导入自动化进入`game-art-pipeline`，图形测量与优化进入`game-graphics-performance`。
    - 需要创建、更新、迁移或校验正式游戏设计文档集：`game-design-document`；它装配专业产物，不替代专业判断。
 5. 若任务只涉及一个专业，直接使用对应技能，不强制生成完整跨专业方案。
 6. 汇总专业交付物之间的依赖、冲突和验收顺序，实施后把结果对应回共同基线。
 7. 跨专业交接使用公共契约的最小交接包；需要正式归档时交给`game-design-document`，不在本技能另建第二套文档结构。
+8. 执行结束前复核最初路由：若预期是完整游戏拆解，确认体验与玩法、正式循环、逐系统文档、需求、配置、清单和校验报告均已交付或逐项标为受阻。缺少其中任何一类时只能报告阶段进展，不能报告任务完成。
 
 ## 需求分层
 

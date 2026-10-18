@@ -1,0 +1,7 @@
+interface:
+  display_name: "游戏美术指导"
+  short_description: "建立全项目视觉支柱、风格边界与美术圣经"
+  default_prompt: "使用 $game-art-direction 建立或评审这个项目的全局视觉方向和跨美术专项基线。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true
