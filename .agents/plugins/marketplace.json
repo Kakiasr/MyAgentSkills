@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "game-design-dev",
+      "name": "kaki-game-development-tools",
       "source": {
         "source": "local",
-        "path": "./Documents/MyAgentSkills/plugins/game-design-dev"
+        "path": "./plugins/kaki-game-development-tools"
       },
       "policy": {
         "installation": "AVAILABLE",

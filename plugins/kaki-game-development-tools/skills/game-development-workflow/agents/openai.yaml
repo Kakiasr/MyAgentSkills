@@ -1,0 +1,8 @@
+interface:
+  display_name: "Kaki的游戏开发工具"
+  short_description: "将游戏需求推进为可实现、可验收的开发任务"
+  default_prompt: "分析当前游戏开发需求，选择正确工作流，并产出下一步可直接执行的交付物。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true
+

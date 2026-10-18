@@ -1,0 +1,47 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "kaki-game-development-tools",
+  "version": "0.4.2",
+  "description": "Kaki 的全流程游戏开发插件，覆盖游戏设计、程序架构与开发、美术设计、美术资产创建和技术美术。",
+  "author": {
+    "name": "Kakiasr"
+  },
+  "homepage": "https://github.com/Kakiasr/MyAgentSkills",
+  "repository": "https://github.com/Kakiasr/MyAgentSkills",
+  "license": "MIT",
+  "keywords": [
+    "game-design",
+    "game-development",
+    "unity",
+    "godot",
+    "prototype",
+    "game-art",
+    "technical-art"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Kaki的游戏开发工具",
+        "shortDescription": "覆盖设计、程序、美术与技术美术",
+        "longDescription": "以统一入口协调游戏设计、游戏程序架构与开发、游戏美术设计、游戏美术资产创建和游戏技术美术五类能力，将创意持续推进为可制作、可集成、可验证的游戏交付物。",
+        "developerName": "Kakiasr",
+        "category": "Development",
+        "capabilities": [
+          "Game Design",
+          "Game Programming",
+          "Game Art Design",
+          "Game Art Asset Creation",
+          "Technical Art"
+        ],
+        "defaultPrompt": [
+          "从设计、程序、美术和技术美术角度规划这个游戏项目。",
+          "把这个游戏创意推进为可以开发和制作的最小可玩版本。",
+          "评审当前游戏项目，并给出跨专业的下一阶段执行计划。"
+        ],
+        "brandColor": "#6E4CCB",
+        "composerIcon": "./assets/kaki-game-development-tools.svg",
+        "logo": "./assets/kaki-game-development-tools.svg"
+      }
+    }
+  }
+}

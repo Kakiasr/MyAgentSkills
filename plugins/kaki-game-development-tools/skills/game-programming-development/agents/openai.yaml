@@ -1,0 +1,8 @@
+interface:
+  display_name: "游戏程序架构与开发"
+  short_description: "设计并实现可维护、可测试的游戏系统"
+  default_prompt: "把已确认的游戏规则设计成可实现的程序架构，并完成或规划开发与验证。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true
+

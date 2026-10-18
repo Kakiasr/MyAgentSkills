@@ -1,0 +1,8 @@
+interface:
+  display_name: "游戏设计"
+  short_description: "设计与评审体验、玩法、系统和循环"
+  default_prompt: "从玩家体验、核心玩法、系统和循环角度设计或评审这个游戏。"
+  brand_color: "#6E4CCB"
+policy:
+  allow_implicit_invocation: true
+
