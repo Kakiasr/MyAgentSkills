@@ -1,13 +1,15 @@
 ---
 name: game-development-workflow
-description: "Use when a game-development request spans two or more of game design, programming, art design, asset creation, and technical art and needs one coordinated plan with explicit handoffs and acceptance criteria."
+description: "Coordinate requests spanning game analysis, experience and gameplay, requirement system trees, loop diagrams, programming, art, assets, or technical art when they need a shared plan, handoffs, and acceptance criteria. Route single-specialty work directly to the matching skill."
 ---
 
 # Game Development Workflow
 
 ## 目标
 
-协调游戏设计、程序、美术设计、资产创建与技术美术，把需求推进为可制作、可集成、可运行、可验收的游戏交付物。默认使用中文，并优先完成最小可玩的闭环。
+协调游戏拆解、体验与玩法、系统设计、循环设计、程序、美术设计、资产创建与技术美术，把需求推进为可制作、可集成、可运行、可验收的游戏交付物。默认使用中文，并优先完成用户范围内的最小闭环。
+
+本技能只负责推进工作，不维护正式文档集。用户要求策划案、复刻文档、需求集、配置表、文档迁移或跨文档校验时，转交`game-design-document`；阶段成果需要冻结为正式基线时也由该技能装配。跨技能工作先读[插件级路由与交接契约](../../references/skill-routing-and-handoff.md)。
 
 ## 工作顺序
 
@@ -15,19 +17,26 @@ description: "Use when a game-development request spans two or more of game desi
 2. 检查项目文件，确认目标引擎、平台、画面类型、分辨率、性能等级、输入方式、团队规模和交付期限。缺失信息只有在会改变方案时才追问。
 3. 建立共同基线：玩家目标、核心循环、目标平台、镜头、视觉目标、帧率与内存预算、最小可玩范围。
 4. 按依赖顺序调用本插件技能：
-   - 玩法和规则未定：`game-design`。
+   - 已有游戏机制、内容、数值与发行包的证据分析：`game-analysis`。仅分析不默认实现复刻；普通源码不强制启用REA。
+   - 目标感受、玩家操作、决策与反馈未定：`game-design`（游戏体验与玩法设计，保留旧调用ID）。
+   - 零散规则转需求、系统树新建／增量修改、配置与行为契约：`game-system-design`。
+   - 分析／绘制游戏循环、层级节律与再次进入动机：`game-loop-design`。
    - 需要技术方案或代码：`game-programming-development`。
    - 需要视觉方案：`game-art-design`。
    - 需要生产具体素材：`game-art-asset-creation`。
    - 需要渲染、性能、Shader 或资产管线：`game-technical-art`。
+   - 需要创建、更新、迁移或校验正式游戏设计文档集：`game-design-document`；它装配专业产物，不替代专业判断。
 5. 若任务只涉及一个专业，直接使用对应技能，不强制生成完整跨专业方案。
 6. 汇总专业交付物之间的依赖、冲突和验收顺序，实施后把结果对应回共同基线。
+7. 跨专业交接使用公共契约的最小交接包；需要正式归档时交给`game-design-document`，不在本技能另建第二套文档结构。
 
 ## 需求分层
 
 按以下顺序消除歧义：
 
 - 设计层：玩家体验、操作、决策、规则、反馈与内容节奏。
+- 系统需求层：系统边界、需求对象、配置、数据、状态、行为契约与验收；不是代码类图。
+- 循环层：玩家行动、成本、反馈、结果、再次进入与退出的关系图；不是系统树或调用图。
 - 程序层：模块、数据、运行时、接口、工具、测试与构建。
 - 美术设计层：视觉目标、形状、色彩、材质、镜头、动效与可读性。
 - 资产层：规格、来源、生产状态、导出格式、命名、版本与引擎导入。
@@ -35,6 +44,8 @@ description: "Use when a game-development request spans two or more of game desi
 - 验收层：各专业怎样观察、测量和批准结果。
 
 不得用实现名词替代设计结论，也不得把尚未确定的设计伪装成代码需求。必要假设必须标记为 `假设`。
+
+仅要求把已有规则写成树时，直接进入系统设计，不强制重新定义体验；仅要求循环图时，不默认修改系统树或实现游戏。综合设计按需要用“体验／玩法→系统规则与循环对齐→程序／美术交接”的依赖顺序，各专业引用同一批规则ID，避免重复维护。
 
 ## 交付要求
 
@@ -52,5 +63,6 @@ description: "Use when a game-development request spans two or more of game desi
 - 优先完成一个从输入到反馈、奖励或失败的可玩闭环。
 - 不因“以后可能需要”而提前加入联网、商业化、大规模内容或复杂框架。
 - 优先调用当前环境已有的专项技能和工具，不在本插件内复制外部实现。
-- 只有用户明确要求且拥有权限时，才把逆向分析作为辅助验证手段。
+- 游戏拆解按资料与问题选择试玩／规则／源码／发行包路线；技术逆向须在用户授权目标与权限内进行，不因需要解释机制就自动解包或启动游戏。
 
+- 证据层：现有游戏实际观察、声明配置、实现追踪、推断与未知；原作事实不等于新项目设计决定。

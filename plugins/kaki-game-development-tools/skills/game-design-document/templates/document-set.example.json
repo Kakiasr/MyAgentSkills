@@ -1,0 +1,53 @@
+{
+  "schemaVersion": "1.0",
+  "project": {
+    "name": "示例项目",
+    "baseline": "目标版本与范围",
+    "status": "draft"
+  },
+  "documents": [
+    { "path": "00-index-and-decisions.md", "kind": "index" },
+    { "path": "04-system-index.md", "kind": "system-index" },
+    { "path": "systems/SYS-CORE-core-play.md", "kind": "system", "systemId": "SYS-CORE" },
+    { "path": "07-acceptance-and-traceability.md", "kind": "acceptance-index" }
+  ],
+  "entities": [
+    {
+      "id": "SYS-CORE",
+      "type": "system",
+      "definedIn": "systems/SYS-CORE-core-play.md",
+      "refs": []
+    },
+    {
+      "id": "ACT-CORE-PLAY",
+      "type": "action",
+      "systemId": "SYS-CORE",
+      "definedIn": "systems/SYS-CORE-core-play.md",
+      "refs": ["SYS-CORE", "CFG-CORE-COST"],
+      "acceptance": ["AC-CORE-PLAY"]
+    },
+    {
+      "id": "CFG-CORE-COST",
+      "type": "config",
+      "systemId": "SYS-CORE",
+      "definedIn": "systems/SYS-CORE-core-play.md",
+      "refs": ["SYS-CORE"],
+      "consumers": ["ACT-CORE-PLAY"]
+    },
+    {
+      "id": "REQ-CORE-PLAY",
+      "type": "requirement",
+      "systemId": "SYS-CORE",
+      "definedIn": "systems/SYS-CORE-core-play.md",
+      "refs": ["ACT-CORE-PLAY"],
+      "acceptance": ["AC-CORE-PLAY"]
+    },
+    {
+      "id": "AC-CORE-PLAY",
+      "type": "acceptance",
+      "systemId": "SYS-CORE",
+      "definedIn": "systems/SYS-CORE-core-play.md",
+      "refs": ["REQ-CORE-PLAY", "ACT-CORE-PLAY"]
+    }
+  ]
+}

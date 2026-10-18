@@ -1,0 +1,45 @@
+{
+  "width": 1340,
+  "height": 1160,
+  "start": "init",
+  "loops": [
+    {"id":"main","label":"五步开箱循环","x":670,"y":580,"width":1300,"height":1120,
+     "global_information":["keys","coins","actions","target"]}
+  ],
+  "nodes": [
+    {"id":"keys","label":"当前钥匙数量","kind":"information","loop":"main","x":250,"y":140,"width":220,"height":44},
+    {"id":"coins","label":"当前金币","kind":"information","loop":"main","x":550,"y":140,"width":220,"height":44},
+    {"id":"actions","label":"剩余行动次数","kind":"information","loop":"main","x":850,"y":140,"width":220,"height":44},
+    {"id":"target","label":"目标：13金币","kind":"information","loop":"main","x":1150,"y":140,"width":220,"height":44},
+    {"id":"init","label":"开始新局","kind":"action","loop":"main","x":160,"y":350,"rule_ref":"ACT-START / ACT-RESTART"},
+    {"id":"choose","label":"补给还是开箱？","kind":"branch","loop":"main","x":480,"y":350},
+    {"id":"supply","label":"补给","kind":"action","loop":"main","x":820,"y":350},
+    {"id":"chest","label":"选择一个宝箱开启","kind":"action","loop":"main","x":1160,"y":350},
+    {"id":"valid","label":"钥匙够开这个箱吗？","kind":"branch","loop":"main","x":1160,"y":550,"width":220,"rule_ref":"RULE-REQUEST"},
+    {"id":"result","label":"本次行动结果","kind":"information","loop":"main","x":820,"y":550,"rule_ref":"RULE-COMMIT"},
+    {"id":"goal","label":"金币达到13？","kind":"branch","loop":"main","x":480,"y":550,"rule_ref":"RULE-END"},
+    {"id":"remaining","label":"还有行动次数吗？","kind":"branch","loop":"main","x":480,"y":750,"rule_ref":"RULE-END"},
+    {"id":"lost","label":"本局失败","kind":"information","loop":"main","x":160,"y":750},
+    {"id":"won","label":"本局胜利","kind":"information","loop":"main","x":820,"y":750},
+    {"id":"retry","label":"再玩一次？","kind":"branch","loop":"main","x":820,"y":950},
+    {"id":"title","label":"返回标题","kind":"action","loop":"main","x":1160,"y":950}
+  ],
+  "edges": [
+    {"from":"init","to":"choose","label":""},
+    {"from":"choose","to":"supply","label":"补给"},
+    {"from":"choose","to":"chest","label":"开箱","via":[[480,270],[1160,270]],"label_x":820,"label_y":250},
+    {"from":"supply","to":"result","label":"消耗1行动"},
+    {"from":"chest","to":"valid","label":""},
+    {"from":"valid","to":"choose","label":"否：不扣费","via":[[1290,550],[1290,220],[480,220]],"label_x":1010,"label_y":208},
+    {"from":"valid","to":"result","label":"是：消耗1行动"},
+    {"from":"result","to":"goal","label":""},
+    {"from":"goal","to":"won","label":"是","via":[[650,550],[650,750]],"label_x":675,"label_y":650},
+    {"from":"goal","to":"remaining","label":"否"},
+    {"from":"remaining","to":"choose","label":"是","via":[[480,650],[80,650],[80,300],[480,300]],"label_x":220,"label_y":630},
+    {"from":"remaining","to":"lost","label":"否"},
+    {"from":"won","to":"retry","label":""},
+    {"from":"lost","to":"retry","label":"","via":[[160,850],[820,850]]},
+    {"from":"retry","to":"init","label":"是：重置本局","via":[[820,1060],[40,1060],[40,350]],"label_x":430,"label_y":1040},
+    {"from":"retry","to":"title","label":"否"}
+  ]
+}

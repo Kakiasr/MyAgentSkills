@@ -1,0 +1,6 @@
+interface:
+  display_name: "游戏系统设计"
+  short_description: "将零散游戏需求转成系统树、配置与行为契约，并增量合入已有树"
+  default_prompt: "使用 $game-system-design 将这些零散需求构建成系统树，或以可追溯的增量补丁合入我提供的已有系统树。"
+policy:
+  allow_implicit_invocation: true

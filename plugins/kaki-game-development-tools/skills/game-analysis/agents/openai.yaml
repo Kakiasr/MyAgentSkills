@@ -1,0 +1,6 @@
+interface:
+  display_name: "游戏拆解"
+  short_description: "完整保留REA逆向工作流，优先还原游戏规则、数值与例外，交接系统树和循环图"
+  default_prompt: "使用 $game-analysis 的完整REA工作流拆解我指定的游戏，追踪实际实现与结算，将证据支持的规则、例外和未知项交接为开发需求。"
+policy:
+  allow_implicit_invocation: true

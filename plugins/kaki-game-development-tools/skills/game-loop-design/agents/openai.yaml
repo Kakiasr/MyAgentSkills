@@ -1,0 +1,6 @@
+interface:
+  display_name: "游戏循环设计"
+  short_description: "用行为、信息、分支、子循环四类节点讲清游戏怎么玩，逐循环标注全局可获取信息"
+  default_prompt: "使用 $game-loop-design 绘制让人看懂游戏怎么玩的循环图，只用行为、信息、分支、子循环四类节点，每个循环体单独标注全局可获取信息，图内不添加无关描述。"
+policy:
+  allow_implicit_invocation: true

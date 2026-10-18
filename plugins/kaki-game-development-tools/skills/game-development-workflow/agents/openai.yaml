@@ -1,7 +1,7 @@
 interface:
   display_name: "Kaki的游戏开发工具"
-  short_description: "将游戏需求推进为可实现、可验收的开发任务"
-  default_prompt: "分析当前游戏开发需求，选择正确工作流，并产出下一步可直接执行的交付物。"
+  short_description: "协调游戏拆解、体验玩法、系统树、循环图与程序美术的跨专业交付"
+  default_prompt: "使用 $game-development-workflow 分析当前需求，在游戏拆解、体验玩法、系统树、循环图及实现制作之间选择合适技能并安排交接。"
   brand_color: "#6E4CCB"
 policy:
   allow_implicit_invocation: true

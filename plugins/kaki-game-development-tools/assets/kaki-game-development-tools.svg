@@ -1,6 +1,74 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Kaki game development tools">
-  <rect width="128" height="128" rx="28" fill="#6E4CCB"/>
-  <path d="M30 35h16v23l22-23h21L63 61l29 32H70L46 66v27H30V35Z" fill="#fff"/>
-  <circle cx="96" cy="33" r="9" fill="#F6C453"/>
-  <path d="M91 92h10v10H91zM104 79h10v10h-10z" fill="#BFAEFF"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Kaki game development tools</title>
+  <desc id="desc">A dimensional white K with golden and violet tool nodes on a polished purple app icon.</desc>
+  <defs>
+    <linearGradient id="app-bg" x1="18" y1="7" x2="112" y2="122" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#A783FF"/>
+      <stop offset="0.38" stop-color="#7048D7"/>
+      <stop offset="0.72" stop-color="#4B279F"/>
+      <stop offset="1" stop-color="#2B155F"/>
+    </linearGradient>
+    <radialGradient id="top-glow" cx="0" cy="0" r="1" gradientTransform="translate(38 20) rotate(46) scale(74 65)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6D9FF" stop-opacity=".72"/>
+      <stop offset=".44" stop-color="#BDA3FF" stop-opacity=".16"/>
+      <stop offset="1" stop-color="#7A56D8" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="rim" x1="24" y1="13" x2="99" y2="117" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity=".42"/>
+      <stop offset=".5" stop-color="#FFFFFF" stop-opacity=".08"/>
+      <stop offset="1" stop-color="#160A39" stop-opacity=".5"/>
+    </linearGradient>
+    <linearGradient id="glyph" x1="40" y1="30" x2="75" y2="99" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset=".55" stop-color="#F9F7FF"/>
+      <stop offset="1" stop-color="#D9CFF7"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="76" y1="31" x2="90" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4B8"/>
+      <stop offset=".45" stop-color="#FFD768"/>
+      <stop offset="1" stop-color="#F09A2E"/>
+    </linearGradient>
+    <linearGradient id="module" x1="88" y1="82" x2="105" y2="101" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7DCFF"/>
+      <stop offset="1" stop-color="#9A78F4"/>
+    </linearGradient>
+    <filter id="app-shadow" x="-20%" y="-18%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="5" stdDeviation="6" flood-color="#190B3B" flood-opacity=".42"/>
+    </filter>
+    <filter id="glyph-shadow" x="-35%" y="-30%" width="180%" height="190%">
+      <feDropShadow dx="0" dy="4" stdDeviation="3.5" flood-color="#1C073F" flood-opacity=".48"/>
+      <feDropShadow dx="0" dy="-1" stdDeviation=".7" flood-color="#FFFFFF" flood-opacity=".25"/>
+    </filter>
+    <filter id="node-shadow" x="-55%" y="-45%" width="210%" height="220%">
+      <feDropShadow dx="0" dy="3" stdDeviation="2.5" flood-color="#1B083E" flood-opacity=".5"/>
+    </filter>
+    <clipPath id="icon-clip">
+      <rect x="4" y="4" width="120" height="120" rx="29"/>
+    </clipPath>
+  </defs>
+
+  <g filter="url(#app-shadow)">
+    <rect x="4" y="4" width="120" height="120" rx="29" fill="url(#app-bg)"/>
+    <g clip-path="url(#icon-clip)">
+      <rect x="4" y="4" width="120" height="120" fill="url(#top-glow)"/>
+      <path d="M-1 89C29 66 57 101 89 75c18-14 32-13 47-6v61H-1Z" fill="#321570" fill-opacity=".32"/>
+      <path d="M9 11c30-9 71-5 102 20" fill="none" stroke="#FFFFFF" stroke-opacity=".15" stroke-width="9" stroke-linecap="round"/>
+      <circle cx="108" cy="101" r="35" fill="#9B72FF" fill-opacity=".11"/>
+    </g>
+    <rect x="5" y="5" width="118" height="118" rx="28" fill="none" stroke="url(#rim)" stroke-width="2"/>
+  </g>
+
+  <g filter="url(#glyph-shadow)" fill="none" stroke="url(#glyph)" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M39 35v58"/>
+    <path d="M41 66 77 35"/>
+    <path d="m58 51 31 42"/>
+  </g>
+
+  <g filter="url(#node-shadow)">
+    <path d="m82 29 10 10-10 10-10-10Z" fill="url(#gold)"/>
+    <path d="m82 31.5 7.5 7.5-2.3 2.3-7.5-7.5Z" fill="#FFFFFF" fill-opacity=".46"/>
+    <rect x="86" y="84" width="19" height="19" rx="6" fill="url(#module)"/>
+    <path d="M91 88h6.5a3.5 3.5 0 0 1 3.5 3.5V98" fill="none" stroke="#FFFFFF" stroke-opacity=".55" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="95.5" cy="93.5" r="2.5" fill="#FFFFFF"/>
+  </g>
 </svg>

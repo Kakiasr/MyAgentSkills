@@ -1,0 +1,17 @@
+{
+  "model": "paper reference model, not engine/UI implementation",
+  "pass": true,
+  "asserted_examples": 17,
+  "terminal_legal_action_paths": 31,
+  "winning_paths": 18,
+  "losing_paths": 13,
+  "minimum_winning_actions": 4,
+  "maximum_winning_actions": 5,
+  "winning_final_coin_totals": [
+    13,
+    16
+  ],
+  "markdown_table_errors": [],
+  "engine_tests_executed": false,
+  "player_tests_executed": false
+}

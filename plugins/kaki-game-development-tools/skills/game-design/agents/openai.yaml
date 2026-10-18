@@ -1,7 +1,7 @@
 interface:
-  display_name: "游戏设计"
-  short_description: "设计与评审体验、玩法、系统和循环"
-  default_prompt: "从玩家体验、核心玩法、系统和循环角度设计或评审这个游戏。"
+  display_name: "游戏体验与玩法设计"
+  short_description: "定义目标玩家的体验承诺、核心玩法、操作决策、反馈与原型验证假设"
+  default_prompt: "使用 $game-design 明确这款游戏的玩家体验、核心玩法、决策与反馈，并列出需要原型验证的假设。"
   brand_color: "#6E4CCB"
 policy:
   allow_implicit_invocation: true

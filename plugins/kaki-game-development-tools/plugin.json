@@ -1,8 +1,8 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kaki-game-development-tools",
-  "version": "0.4.2",
-  "description": "Kaki 的全流程游戏开发插件，覆盖游戏设计、程序架构与开发、美术设计、美术资产创建和技术美术。",
+  "version": "0.8.1",
+  "description": "Kaki 的游戏开发插件，覆盖游戏设计文档、游戏拆解、体验与玩法、系统树、循环图、程序、美术、资产制作和技术美术。",
   "author": {
     "name": "Kakiasr"
   },
@@ -10,7 +10,12 @@
   "repository": "https://github.com/Kakiasr/MyAgentSkills",
   "license": "MIT",
   "keywords": [
+    "game-analysis",
+    "game-design-document",
+    "rea",
     "game-design",
+    "game-system-design",
+    "game-loop-design",
     "game-development",
     "unity",
     "godot",
@@ -23,11 +28,15 @@
       "interface": {
         "displayName": "Kaki的游戏开发工具",
         "shortDescription": "覆盖设计、程序、美术与技术美术",
-        "longDescription": "以统一入口协调游戏设计、游戏程序架构与开发、游戏美术设计、游戏美术资产创建和游戏技术美术五类能力，将创意持续推进为可制作、可集成、可验证的游戏交付物。",
+        "longDescription": "以统一入口协调游戏拆解、体验与玩法、系统树、循环图及程序美术制作。游戏拆解完整保留REA技能正文、参考与工具集，在此基础上定制游戏机制、数值、结算与例外还原，以证据交接系统树、循环图与开发验收。",
         "developerName": "Kakiasr",
         "category": "Development",
         "capabilities": [
+          "Game Design Documents",
+          "Game Analysis",
           "Game Design",
+          "Game System Design",
+          "Game Loop Design",
           "Game Programming",
           "Game Art Design",
           "Game Art Asset Creation",

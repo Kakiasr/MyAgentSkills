@@ -1,0 +1,11 @@
+{
+  "package": "rea-agents",
+  "version": "6.7.0",
+  "checkedAt": "2026-10-18",
+  "registry": "https://registry.npmjs.org/rea-agents/latest",
+  "upstream": "https://github.com/morluto/rea",
+  "tarball": "https://registry.npmjs.org/rea-agents/-/rea-agents-6.7.0.tgz",
+  "integrity": "sha512-yhIx2ioJYYT1C/tONfYeitC6LhnKmCh+ZwRUOgYuhSc733lGhkkt73zhug9WmLgxoMdKuqIYGCoBfD4fXkOhFw==",
+  "skillMetadataVersion": "42",
+  "node": "^22.19.0 || ^24.11.0 || >=26.0.0"
+}
