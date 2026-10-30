@@ -1,6 +1,5 @@
 ---
 name: unity-cli
-model: inherit
 description: Unity CLI operating contract for every Unity task. Prove the exact project and Editor, choose CLI or built-in MCP transport, run Roslyn and focused test checks, apply ownership and risk gates, and install the official CLI safely. For idea-to-project setup use unity:new-unity-project.
 allowed-tools:
   - Bash

@@ -1,6 +1,5 @@
 ---
 name: clean-oop-architecture
-model: inherit
 description: Use for SOLID, Clean Code, and maintainable object-oriented design, including Unity C#. Covers dependency boundaries, DI, ServiceLocator, Onity, design patterns, testability, naming, code smells, refactoring, overengineering risk, surgical changes, and goal-driven verification.
 ---
 
