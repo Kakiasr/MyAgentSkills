@@ -1,4 +1,4 @@
 interface:
   display_name: "标签制作"
   short_description: "以电影或专辑为参考制作游戏标签，支持局部改稿、选稿与正式资产覆盖交付"
-  default_prompt: "使用 $tag-asset-production 继续设计游戏标签，先研究艺术参考，再制作左侧主体与右侧英文艺术字的设计稿。"
+  default_prompt: "使用 $tag-asset-production 继续设计游戏标签，先研究艺术参考，再制作左侧主体与右侧多语言艺术字的设计稿。"
