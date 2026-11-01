@@ -29,3 +29,16 @@ codex plugin add kaki-game-development-tools@kakiasr-local
 旧仓库的自动同步脚本与定时任务不属于这个插件。若其他电脑仍运行旧仓库的自动提交或推送任务，请先停用，避免旧内容重新上传。
 
 游戏核心体验知识引用由用户提供，包含校注全文及 200 张原页图。仓库公开可见；插件的 MIT 许可不自动改变原资料的授权。
+
+## minigame项目生产技能
+
+这些是独立技能，不随游戏开发工具插件自动安装。项目内入口由`Assets/Skills/README.md`维护；对象内容遵循项目配置总表，已有资源覆盖遵循项目工单。
+
+| 名称 | 技能 | 功能 |
+| --- | --- | --- |
+| 内容设计 | [minigame-design-config](skills/minigame-design-config/SKILL.md) | 设计卡牌、贴纸和标签的效果、数值及配方，从配置总表同步实现 |
+| 静态美术 | [minigame-art-production](skills/minigame-art-production/SKILL.md) | 按资产类别制作图像，核对原生像素、导入参数和实际资源引用 |
+| 动效与特效 | [minigame-motion-vfx](skills/minigame-motion-vfx/SKILL.md) | 设计并实现动效与特效，明确触发、打断、重入和生命周期清理 |
+| 音频制作与接入 | [minigame-audio-production](skills/minigame-audio-production/SKILL.md) | 制作音效、音乐与语音，核对来源、听感及真实播放和停止链路 |
+| 文案与内联 | [minigame-copy-localization](skills/minigame-copy-localization/SKILL.md) | 保持配置总表原文，处理必要内联、成长数值绑定和指定语言映射 |
+| 标签美术 | [tag-asset-production](skills/tag-asset-production/SKILL.md) | 以电影或专辑为参考制作标签，支持多语言艺术字、局部改稿及交付 |
