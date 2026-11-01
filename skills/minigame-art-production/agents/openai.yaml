@@ -1,4 +1,4 @@
 interface:
   display_name: "静态美术"
-  short_description: "按资产类别制作图像，核对原生像素、导入参数和实际资源引用"
-  default_prompt: "使用 $minigame-art-production 根据本次需求制作静态美术，定位正式参考和消费者，交付候选、源文件、检查结果与覆盖输入。"
+  short_description: "按资产类别建立风格契约，制作图像并核对像素、批次一致性与消费者"
+  default_prompt: "使用 $minigame-art-production 按现行基线建立可执行风格契约，制作或修改静态资产，校准批次一致性并交付候选与检查证据。"

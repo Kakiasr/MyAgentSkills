@@ -1,4 +1,4 @@
 interface:
   display_name: "标签美术"
-  short_description: "以电影或专辑为参考制作标签，支持多语言艺术字、局部改稿及交付"
-  default_prompt: "使用 $tag-asset-production 按本次需求设计或修改标签美术，核对艺术参考与画面文字，交付透明候选和正式资源接入输入。"
+  short_description: "保留每款独立艺术来源，统一标签构图完成度、字形与交付检查"
+  default_prompt: "使用 $tag-asset-production 按本次需求设计或修改标签，明确共同规范与单款艺术语言，保留锁定内容，检查文字、显示尺度并交付候选。"

@@ -1,4 +1,4 @@
 interface:
   display_name: "动效与特效"
-  short_description: "设计并实现动效与特效，明确触发、打断、重入和生命周期清理"
-  default_prompt: "使用 $minigame-motion-vfx 根据本次需求制作动效或特效，核对属性写入者、触发与清理，并提供脚本或资源装配输入。"
+  short_description: "将视觉基线转为动效与材质参数，核对风格、触发、打断及清理"
+  default_prompt: "使用 $minigame-motion-vfx 按现行视觉基线制作动效、特效或材质，明确表现参数、变体、属性写入者与生命周期，交付实现和验证边界。"

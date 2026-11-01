@@ -1,4 +1,4 @@
 interface:
   display_name: "音频制作与接入"
-  short_description: "制作音效、音乐与语音，核对来源、听感及真实播放和停止链路"
-  default_prompt: "使用 $minigame-audio-production 根据本次需求制作或接入声音，交付音频候选、实际规格、试听入口和播放停止消费者。"
+  short_description: "按声音家族制作音效与音乐，核对音色、混音关系及播放停止链路"
+  default_prompt: "使用 $minigame-audio-production 按现行声音依据制作或接入音频，定义音色与混音关系，交付候选、技术测量、试听及播放停止契约。"
