@@ -1,0 +1,4 @@
+interface:
+  display_name: "小游戏内容设计与配置"
+  short_description: "从配置总表到行为实现、内联文案与正式候选的可核对生产流程"
+  default_prompt: "使用 $minigame-design-config 完成本项目本次内容生产，核对现行事实源、实际消费者与交付证据。"

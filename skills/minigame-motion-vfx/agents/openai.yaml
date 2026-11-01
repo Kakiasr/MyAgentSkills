@@ -1,0 +1,4 @@
+interface:
+  display_name: "小游戏动效与特效生产"
+  short_description: "把动效触发、生命周期与资源接线连成可验证且可回退的流程"
+  default_prompt: "使用 $minigame-motion-vfx 完成本项目本次内容生产，核对现行事实源、实际消费者与交付证据。"
