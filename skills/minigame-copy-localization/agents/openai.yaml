@@ -1,4 +1,4 @@
 interface:
-  display_name: "小游戏文案与内联生产"
-  short_description: "保持总表原文，核对内联数值、字形与实际 tooltip 消费者"
-  default_prompt: "使用 $minigame-copy-localization 完成本项目本次内容生产，核对现行事实源、实际消费者与交付证据。"
+  display_name: "文案与内联"
+  short_description: "保持配置总表原文，处理必要内联、成长数值绑定和指定语言映射"
+  default_prompt: "使用 $minigame-copy-localization 根据本次需求处理文案、内联或指定语言，逐字核对原文映射及实际tooltip显示入口。"

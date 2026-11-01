@@ -1,4 +1,4 @@
 interface:
-  display_name: "小游戏音频生产与接入"
-  short_description: "从声音意图与来源到真实播放消费者、停止恢复和听感验证"
-  default_prompt: "使用 $minigame-audio-production 完成本项目本次内容生产，核对现行事实源、实际消费者与交付证据。"
+  display_name: "音频制作与接入"
+  short_description: "制作音效、音乐与语音，核对来源、听感及真实播放和停止链路"
+  default_prompt: "使用 $minigame-audio-production 根据本次需求制作或接入声音，交付音频候选、实际规格、试听入口和播放停止消费者。"

@@ -1,4 +1,4 @@
 interface:
-  display_name: "小游戏静态美术生产"
-  short_description: "按实际资产类别连接现行视觉规范、像素检查和唯一覆盖工单"
-  default_prompt: "使用 $minigame-art-production 完成本项目本次内容生产，核对现行事实源、实际消费者与交付证据。"
+  display_name: "静态美术"
+  short_description: "按资产类别制作图像，核对原生像素、导入参数和实际资源引用"
+  default_prompt: "使用 $minigame-art-production 根据本次需求制作静态美术，定位正式参考和消费者，交付候选、源文件、检查结果与覆盖输入。"

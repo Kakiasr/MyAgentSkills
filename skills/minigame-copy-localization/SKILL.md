@@ -3,7 +3,7 @@ name: minigame-copy-localization
 description: 维护 minigame 卡牌、贴纸、标签 tooltip 和 UI 文案，处理必要内联、数值绑定、原文往返和用户指定语言；不未经要求润色或扩展本地化范围。
 ---
 
-# 小游戏文案与内联生产
+# 文案与内联
 
 ## 项目入口与交付
 
@@ -28,3 +28,7 @@ description: 维护 minigame 卡牌、贴纸、标签 tooltip 和 UI 文案，�
 5. 统计实际字符与字体覆盖，核对大小、换行、内容截断、数值框与效果框。静态字符串检查不证明 TMP 缺字或运行布局通过。
 
 配置候选沿用 PrepareConfigMaster 与交付校验；效果变更仍先实现审阅。交付原文-内联映射、绑定参数、逐字比较结果、实际视图入口和未测布局。仅修文案无需新增玩法枚举、事件或原子库编辑界面。
+
+## 项目显示入口
+
+按当前代码定位卡牌的`CardTooltipQuery`、`CardTooltipContentComposer`和`CardTooltipView`，贴纸的查询/模板与`TooltipView`，以及标签待选/持有/收藏入口。卡牌数值框和效果框已有独立文案通路；需要验证两场景共享契约时核对CardGridV9与StickerGallery，不能用一个入口替代全部验收。只同步已实现内联标记，不重新启用归档别名或自动补正文。配置准备会校验玩法源码审阅状态；报错时交对应实现者核对，不为纯文案绕过版本检查。
