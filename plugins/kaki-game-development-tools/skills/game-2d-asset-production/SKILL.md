@@ -9,7 +9,7 @@ description: "Plan, create, edit, export, organize, or validate game-ready 2D as
 
 把批准的`VIS-*`转为可追踪的2D源文件与引擎资产，拥有尺寸、分层、色彩空间、透明边缘、pivot、切片、图集、导出和版本记录。视觉方向变化必须回交设计所有者。
 
-先读[美术专项交接契约](../../references/art-specialist-contract.md)。序列帧和Sprite Sheet专项优先调用仓库`2d-game-animation-assets`；Unity切片、Atlas和UI导入调用匹配Unity技能。
+先读[美术专项交接契约](../../references/art-specialist-contract.md)。Unity切片、Atlas和UI导入调用匹配Unity技能。
 
 ## 工作流与交付
 

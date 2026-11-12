@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "kaki-game-development-tools",
-  "version": "0.10.0",
+  "version": "0.10.1",
   "description": "Kaki 的游戏开发插件，覆盖游戏拆解与设计文档、体验系统循环、程序与Unity工程，以及细分的美术设计、资产生产、渲染管线和图形性能。",
   "author": {
     "name": "Kakiasr"

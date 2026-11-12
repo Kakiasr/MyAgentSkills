@@ -6,9 +6,9 @@
 
 ## 独立技能
 
-仓库的独立技能集中在 [`skills`](skills)。当前包括 `2d-game-animation-assets`、`doc`、`pdf`、`playwright`。它们独立于 `kaki-game-development-tools` 插件，安装插件不会自动安装这些技能。Codex 不会直接扫描仓库根目录的 `skills/`；本机使用 `.agents/skills` 到 `skills/` 的目录链接作为发现入口，其他电脑克隆后也需建立该链接。
+仓库的独立技能集中在 [`skills`](skills)。当前包括 `doc`、`pdf`、`playwright`。它们独立于 `kaki-game-development-tools` 插件，安装插件不会自动安装这些技能。Codex 不会直接扫描仓库根目录的 `skills/`；本机使用 `.agents/skills` 到 `skills/` 的目录链接作为发现入口，其他电脑克隆后也需建立该链接。
 
-需要在其他项目中使用某个独立技能时，将该技能目录链接到本机的用户技能目录 `~/.agents/skills/<skill-name>`。本机的 `2d-game-animation-assets`、`doc` 用户链接已通过仓库发现入口重新可读；`pdf`、`playwright` 另有已安装版本。其他电脑克隆仓库后，也需按其系统路径建立用户技能链接。
+需要在其他项目中使用某个独立技能时，将该技能目录链接到本机的用户技能目录 `~/.agents/skills/<skill-name>`。本机的 `doc` 用户链接已通过仓库发现入口重新可读；`pdf`、`playwright` 另有已安装版本。其他电脑克隆仓库后，也需按其系统路径建立用户技能链接。
 
 ## 首次安装
 
