@@ -1,0 +1,4 @@
+interface:
+  display_name: "分数框美术设计"
+  short_description: "在项目美术框架内设计目标分数框的艺术字徽标与框体，并沉淀制作经验"
+  default_prompt: "使用 $score-container-art-design 设计目标分数框，借鉴标签的艺术设计方法，并记录本轮制作经验与卡点。"
